@@ -1,0 +1,293 @@
+\doxysection{Referência do Arquivo Pilha.\+h}
+\hypertarget{_pilha_8h}{}\label{_pilha_8h}\index{Pilha.h@{Pilha.h}}
+
+
+Arquivo header com a declaração de structs e funções para implementação da pilha utilizando lista simplesmente encadeada com nó cabeça.  
+
+
+\doxysubsubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structno}{no}}
+\item 
+struct \mbox{\hyperlink{struct_pilha}{Pilha}}
+\begin{DoxyCompactList}\small\item\em Estrutura que armazena o topo de uma pilha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structno}{no}} \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_pilha_8h_ac61aae3e38c2bca2b70829cc999facd3}{cria\+No}} (void \texorpdfstring{$\ast$}{*}valor)
+\begin{DoxyCompactList}\small\item\em Cria um novo nó para a pilha com o valor passado como argumento, por padrão o campo {\ttfamily prox} aponta para {\ttfamily NULL}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_pilha_8h_a99a641c6e419e5ed1a4c4a80e195f33d}{cria\+Pilha}} ()
+\begin{DoxyCompactList}\small\item\em Cria uma pilha vazia com tamanho 0. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pilha_8h_adc224ddc2f13d7f61deecb4b5a4ccaca}{empilha}} (\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}p, void \texorpdfstring{$\ast$}{*}valor)
+\begin{DoxyCompactList}\small\item\em Empilha um nó com chave {\ttfamily valor} na pilha {\ttfamily p}. \end{DoxyCompactList}\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_pilha_8h_add7747bf27459e299479ad7492aa7bbd}{desempilha}} (\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}p)
+\begin{DoxyCompactList}\small\item\em Desempilha um elemento da pilha {\ttfamily p}, liberando a memória que ele ocupa e retornando o valor que estava no topo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_pilha_8h_a8007eb984b84b3ea7bb76ef6cbedd78b}{esta\+Vazia}} (\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}p)
+\begin{DoxyCompactList}\small\item\em Verifica se a pilha está vazia ou não. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprime\+CB}} (void \texorpdfstring{$\ast$}{*}valor)
+\begin{DoxyCompactList}\small\item\em Função {\itshape callback} para impressão de tipo genérico de dado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pilha_8h_adeb206688bdef1116177382a6c38d742}{imprime\+Pilha}} (\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}} \texorpdfstring{$\ast$}{*}p, void(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprime\+CB}})(void \texorpdfstring{$\ast$}{*}))
+\begin{DoxyCompactList}\small\item\em Imprime todos elementos da pilha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Arquivo header com a declaração de structs e funções para implementação da pilha utilizando lista simplesmente encadeada com nó cabeça. 
+
+\begin{DoxyAuthor}{Autores}
+Davi Brandão de Souza 
+
+Mauricio Zanetti Neto 
+
+Pedro Henrique Alves do Nascimento 
+
+Silvio Eduardo Belinazzi de Andrade
+\end{DoxyAuthor}
+agosto 2025 
+
+Definição no arquivo \mbox{\hyperlink{_pilha_8h_source}{Pilha.\+h}}.
+
+
+
+\label{doc-typedef-members}
+\Hypertarget{_pilha_8h_doc-typedef-members}
+\doxysubsection{Definições dos tipos}
+\Hypertarget{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}\index{Pilha.h@{Pilha.h}!No@{No}}
+\index{No@{No}!Pilha.h@{Pilha.h}}
+\doxysubsubsection{\texorpdfstring{No}{No}}
+{\footnotesize\ttfamily \label{_pilha_8h_a3020fca858045abd38860fbd8a7c1383} 
+typedef struct \mbox{\hyperlink{structno}{no}} \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}}
+
+
+
+\label{doc-func-members}
+\Hypertarget{_pilha_8h_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{_pilha_8h_ac61aae3e38c2bca2b70829cc999facd3}\index{Pilha.h@{Pilha.h}!criaNo@{criaNo}}
+\index{criaNo@{criaNo}!Pilha.h@{Pilha.h}}
+\doxysubsubsection{\texorpdfstring{criaNo()}{criaNo()}}
+{\footnotesize\ttfamily \label{_pilha_8h_ac61aae3e38c2bca2b70829cc999facd3} 
+\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}} \texorpdfstring{$\ast$}{*} cria\+No (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{valor}{}\end{DoxyParamCaption})}
+
+
+
+Cria um novo nó para a pilha com o valor passado como argumento, por padrão o campo {\ttfamily prox} aponta para {\ttfamily NULL}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Ponteiro para o valor que será inserido no nó criado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o ponteiro para o nó criado com o valor dado. 
+\end{DoxyReturn}
+
+
+Definição na linha \mbox{\hyperlink{_pilha_8c_source_l00022}{22}} do arquivo \mbox{\hyperlink{_pilha_8c_source}{Pilha.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *novoNo\ =\ (\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}));}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordflow}{if}\ (novoNo\ ==\ NULL)\{}
+\DoxyCodeLine{00026\ \ \ \ \ perror(\textcolor{stringliteral}{"{}Erro\ ao\ alocar\ nó.\(\backslash\)n"{}});}
+\DoxyCodeLine{00027\ \ \ \ \ exit(1);}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \ \ \ \ novoNo-\/>\mbox{\hyperlink{structno_a893c237ff9580880d323c6636d0af66b}{chave}}\ =\ valor;}
+\DoxyCodeLine{00030\ \ \ \ \ novoNo-\/>\mbox{\hyperlink{structno_ac62f0e6cfd4c2f2cf975d243d16c8046}{prox}}\ =\ NULL;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordflow}{return}\ novoNo;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_pilha_8h_a99a641c6e419e5ed1a4c4a80e195f33d}\index{Pilha.h@{Pilha.h}!criaPilha@{criaPilha}}
+\index{criaPilha@{criaPilha}!Pilha.h@{Pilha.h}}
+\doxysubsubsection{\texorpdfstring{criaPilha()}{criaPilha()}}
+{\footnotesize\ttfamily \label{_pilha_8h_a99a641c6e419e5ed1a4c4a80e195f33d} 
+\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*} cria\+Pilha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Cria uma pilha vazia com tamanho 0. 
+
+\begin{DoxyReturn}{Retorna}
+\doxylink{struct_pilha}{Pilha} criada. 
+\end{DoxyReturn}
+
+
+Definição na linha \mbox{\hyperlink{_pilha_8c_source_l00034}{34}} do arquivo \mbox{\hyperlink{_pilha_8c_source}{Pilha.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{struct_pilha}{Pilha}}\ *novaPilha\ =\ (\mbox{\hyperlink{struct_pilha}{Pilha}}\ *)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_pilha}{Pilha}}));}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordflow}{if}\ (novaPilha\ ==\ NULL)\{}
+\DoxyCodeLine{00038\ \ \ \ \ perror(\textcolor{stringliteral}{"{}Erro\ ao\ alocar\ pilha.\(\backslash\)n"{}});}
+\DoxyCodeLine{00039\ \ \ \ \ exit(1);}
+\DoxyCodeLine{00040\ \ \ \ \ \}}
+\DoxyCodeLine{00041\ \ \ \ \ novaPilha-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}}\ =\ NULL;}
+\DoxyCodeLine{00042\ \ \ \ \ novaPilha-\/>\mbox{\hyperlink{struct_pilha_a0a06f50c808099546e057b445cc90c14}{tamanho}}\ =\ 0;}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{return}\ novaPilha;}
+\DoxyCodeLine{00044\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_pilha_8h_add7747bf27459e299479ad7492aa7bbd}\index{Pilha.h@{Pilha.h}!desempilha@{desempilha}}
+\index{desempilha@{desempilha}!Pilha.h@{Pilha.h}}
+\doxysubsubsection{\texorpdfstring{desempilha()}{desempilha()}}
+{\footnotesize\ttfamily \label{_pilha_8h_add7747bf27459e299479ad7492aa7bbd} 
+void \texorpdfstring{$\ast$}{*} desempilha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Desempilha um elemento da pilha {\ttfamily p}, liberando a memória que ele ocupa e retornando o valor que estava no topo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & \doxylink{struct_pilha}{Pilha} que terá um elemnento desempilhado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Valor que estava armazenado no topo da pilha. 
+\end{DoxyReturn}
+
+
+Definição na linha \mbox{\hyperlink{_pilha_8c_source_l00056}{56}} do arquivo \mbox{\hyperlink{_pilha_8c_source}{Pilha.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\ ==\ NULL\ ||\ p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}}\ ==\ NULL)\{\ \textcolor{keywordflow}{return}\ NULL;\ \}\ \textcolor{comment}{//\ Verificando\ os\ casos\ em\ que\ a\ pilha\ está\ vazia}}
+\DoxyCodeLine{00059\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *aux\ =\ p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}};\ \textcolor{comment}{//\ Nó\ auxiliar\ que\ armazena\ o\ endereço\ inicial\ de\ p.}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ *chave\ =\ aux-\/>\mbox{\hyperlink{structno_a893c237ff9580880d323c6636d0af66b}{chave}};}
+\DoxyCodeLine{00061\ \ \ \ \ p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}}\ =\ aux-\/>\mbox{\hyperlink{structno_ac62f0e6cfd4c2f2cf975d243d16c8046}{prox}};}
+\DoxyCodeLine{00062\ \ \ \ \ p-\/>\mbox{\hyperlink{struct_pilha_a0a06f50c808099546e057b445cc90c14}{tamanho}}-\/-\/;}
+\DoxyCodeLine{00063\ \ \ \ \ free(aux);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{return}\ chave;}
+\DoxyCodeLine{00065\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_pilha_8h_adc224ddc2f13d7f61deecb4b5a4ccaca}\index{Pilha.h@{Pilha.h}!empilha@{empilha}}
+\index{empilha@{empilha}!Pilha.h@{Pilha.h}}
+\doxysubsubsection{\texorpdfstring{empilha()}{empilha()}}
+{\footnotesize\ttfamily \label{_pilha_8h_adc224ddc2f13d7f61deecb4b5a4ccaca} 
+void empilha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{valor}{}\end{DoxyParamCaption})}
+
+
+
+Empilha um nó com chave {\ttfamily valor} na pilha {\ttfamily p}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & \doxylink{struct_pilha}{Pilha} na qual o elemento será empilhado. \\
+\hline
+{\em valor} & Ponteiro para o valor que será empilhado na pilha. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void. 
+\end{DoxyReturn}
+
+
+Definição na linha \mbox{\hyperlink{_pilha_8c_source_l00046}{46}} do arquivo \mbox{\hyperlink{_pilha_8c_source}{Pilha.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\ !=\ NULL)\{}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *noEmp\ =\ \mbox{\hyperlink{_pilha_8c_ac61aae3e38c2bca2b70829cc999facd3}{criaNo}}(valor);\ \textcolor{comment}{//\ Nó\ que\ vai\ ser\ empilhado\ na\ pilha.}}
+\DoxyCodeLine{00050\ \ \ \ \ noEmp-\/>\mbox{\hyperlink{structno_ac62f0e6cfd4c2f2cf975d243d16c8046}{prox}}\ =\ p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}};}
+\DoxyCodeLine{00051\ \ \ \ \ p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}}\ =\ noEmp;}
+\DoxyCodeLine{00052\ \ \ \ \ p-\/>\mbox{\hyperlink{struct_pilha_a0a06f50c808099546e057b445cc90c14}{tamanho}}++;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_pilha_8h_a8007eb984b84b3ea7bb76ef6cbedd78b}\index{Pilha.h@{Pilha.h}!estaVazia@{estaVazia}}
+\index{estaVazia@{estaVazia}!Pilha.h@{Pilha.h}}
+\doxysubsubsection{\texorpdfstring{estaVazia()}{estaVazia()}}
+{\footnotesize\ttfamily \label{_pilha_8h_a8007eb984b84b3ea7bb76ef6cbedd78b} 
+int esta\+Vazia (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se a pilha está vazia ou não. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & A pilha a ser verificada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna 1 se a pilha está vazia ou se não está inicializada, e 0 se não. 
+\end{DoxyReturn}
+
+
+Definição na linha \mbox{\hyperlink{_pilha_8c_source_l00067}{67}} do arquivo \mbox{\hyperlink{_pilha_8c_source}{Pilha.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\ ==\ NULL)\{\ \textcolor{keywordflow}{return}\ 1;\ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{return}\ (p-\/>\mbox{\hyperlink{struct_pilha_a0a06f50c808099546e057b445cc90c14}{tamanho}}\ ==\ 0);}
+\DoxyCodeLine{00071\ \}}
+
+\end{DoxyCode}
+\Hypertarget{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}\index{Pilha.h@{Pilha.h}!imprimeCB@{imprimeCB}}
+\index{imprimeCB@{imprimeCB}!Pilha.h@{Pilha.h}}
+\doxysubsubsection{\texorpdfstring{imprimeCB()}{imprimeCB()}}
+{\footnotesize\ttfamily \label{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309} 
+void imprime\+CB (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{valor}{}\end{DoxyParamCaption})}
+
+
+
+Função {\itshape callback} para impressão de tipo genérico de dado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Ponteiro para o dado a ser impresso. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void. 
+\end{DoxyReturn}
+\Hypertarget{_pilha_8h_adeb206688bdef1116177382a6c38d742}\index{Pilha.h@{Pilha.h}!imprimePilha@{imprimePilha}}
+\index{imprimePilha@{imprimePilha}!Pilha.h@{Pilha.h}}
+\doxysubsubsection{\texorpdfstring{imprimePilha()}{imprimePilha()}}
+{\footnotesize\ttfamily \label{_pilha_8h_adeb206688bdef1116177382a6c38d742} 
+void imprime\+Pilha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}} \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{void(\texorpdfstring{$\ast$}{*}}]{imprime\+CB~}{)(void \texorpdfstring{$\ast$}{*})}\end{DoxyParamCaption})}
+
+
+
+Imprime todos elementos da pilha. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & \doxylink{struct_pilha}{Pilha} a ser impressa. \\
+\hline
+{\em imprime\+CB} & Função {\itshape callback} para imprimir cada elemento da pilha. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void. 
+\end{DoxyReturn}
+
+
+Definição na linha \mbox{\hyperlink{_pilha_8c_source_l00073}{73}} do arquivo \mbox{\hyperlink{_pilha_8c_source}{Pilha.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\ ==\ NULL)\{\ \textcolor{keywordflow}{return};\ \}}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *aux\ =\ p;}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)\{}
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprimeCB}}(aux-\/>\mbox{\hyperlink{structno_a893c237ff9580880d323c6636d0af66b}{chave}});}
+\DoxyCodeLine{00079\ \ \ \ \ aux\ =\ aux-\/>\mbox{\hyperlink{structno_ac62f0e6cfd4c2f2cf975d243d16c8046}{prox}};}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}

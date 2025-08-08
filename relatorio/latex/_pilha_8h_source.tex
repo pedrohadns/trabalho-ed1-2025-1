@@ -1,0 +1,40 @@
+\doxysection{Pilha.\+h}
+\hypertarget{_pilha_8h_source}{}\label{_pilha_8h_source}\mbox{\hyperlink{_pilha_8h}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00001}00001\ \textcolor{comment}{/*\ Grupo\ 4}}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Davi\ Brandão\ de\ Souza}}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00003}00003\ \textcolor{comment}{\ *\ Silvio\ Eduardo\ Belinazzi\ de\ Andrade}}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00004}00004\ \textcolor{comment}{\ *\ Mauricio\ Zanetti\ Neto}}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00005}00005\ \textcolor{comment}{\ *\ Pedro\ Henrique\ Alves\ do\ Nascimento}}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00018}00018\ \textcolor{preprocessor}{\#ifndef\ PILHA\_H}}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00019}00019\ \textcolor{preprocessor}{\#define\ PILHA\_H}}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00025}\mbox{\hyperlink{structno}{00025}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structno}{no}}\{}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00026}\mbox{\hyperlink{structno_a893c237ff9580880d323c6636d0af66b}{00026}}\ \ \ \ \ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{structno_a893c237ff9580880d323c6636d0af66b}{chave}};\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00027}\mbox{\hyperlink{structno_ac62f0e6cfd4c2f2cf975d243d16c8046}{00027}}\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structno}{no}}\ *\mbox{\hyperlink{structno_ac62f0e6cfd4c2f2cf975d243d16c8046}{prox}};\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00028}\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{00028}}\ \}\ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}};}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00034}\mbox{\hyperlink{struct_pilha}{00034}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00035}\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{00035}}\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}};}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00036}\mbox{\hyperlink{struct_pilha_a0a06f50c808099546e057b445cc90c14}{00036}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_pilha_a0a06f50c808099546e057b445cc90c14}{tamanho}};}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00037}00037\ \}\ \mbox{\hyperlink{struct_pilha}{Pilha}};}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00044}00044\ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *\mbox{\hyperlink{_pilha_8h_ac61aae3e38c2bca2b70829cc999facd3}{criaNo}}(\textcolor{keywordtype}{void}\ *valor);}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00050}00050\ \mbox{\hyperlink{struct_pilha}{Pilha}}\ *\mbox{\hyperlink{_pilha_8h_a99a641c6e419e5ed1a4c4a80e195f33d}{criaPilha}}();}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00058}00058\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pilha_8h_adc224ddc2f13d7f61deecb4b5a4ccaca}{empilha}}(\mbox{\hyperlink{struct_pilha}{Pilha}}\ *p,\ \textcolor{keywordtype}{void}\ *valor);}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00065}00065\ \textcolor{keywordtype}{void}\ *\mbox{\hyperlink{_pilha_8h_add7747bf27459e299479ad7492aa7bbd}{desempilha}}(\mbox{\hyperlink{struct_pilha}{Pilha}}\ *p);}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00072}00072\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{_pilha_8h_a8007eb984b84b3ea7bb76ef6cbedd78b}{estaVazia}}(\mbox{\hyperlink{struct_pilha}{Pilha}}\ *p);}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00079}\mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{00079}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprimeCB}}(\textcolor{keywordtype}{void}\ *valor);}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00087}00087\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pilha_8h_adeb206688bdef1116177382a6c38d742}{imprimePilha}}(\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *p,\ \textcolor{keywordtype}{void}\ (*\mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprimeCB}})(\textcolor{keywordtype}{void}*));}
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8h_source_l00089}00089\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
