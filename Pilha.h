@@ -84,7 +84,7 @@ void imprimeCB(void *valor);
  * @param imprimeCB Função *callback* para imprimir cada elemento da pilha.
  * @return void.
  */
-void imprimePilha(No *p, void (*imprimeCB)(void*));
+void imprimePilha(Pilha *p, void (*imprimeCB)(void*));
 
 /**
  * @brief Esvazia uma dada pilha, liberando a memória de cada nó (sem liberar o ponteiro da pilha em si).
