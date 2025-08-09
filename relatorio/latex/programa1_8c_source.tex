@@ -1,0 +1,85 @@
+\doxysection{C\+:/\+Users/pedro/\+One\+Drive/\+Documentos/\+Estudos/3º Período/\+Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c}
+\hypertarget{programa1_8c_source}{}\label{programa1_8c_source}\mbox{\hyperlink{programa1_8c}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00001}00001\ \textcolor{comment}{/*\ Grupo\ 4}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00002}00002\ \textcolor{comment}{\ *\ Davi\ Brandão\ de\ Souza}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00003}00003\ \textcolor{comment}{\ *\ Mauricio\ Zanetti\ Neto}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00004}00004\ \textcolor{comment}{\ *\ Pedro\ Henrique\ Alves\ do\ Nascimento}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00005}00005\ \textcolor{comment}{\ *\ Silvio\ Eduardo\ Belinazzi\ de\ Andrade}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pilha_8h}{Pilha.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00020}00020\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00027}\mbox{\hyperlink{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}{00027}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}{validarExpressao}}(\textcolor{keywordtype}{char}\ *exp)}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00028}00028\ \{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (exp\ ==\ NULL)\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{struct_pilha}{Pilha}}\ *p\ =\ \mbox{\hyperlink{_pilha_8c_a99a641c6e419e5ed1a4c4a80e195f33d}{criaPilha}}();}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{while}\ (exp[i]\ !=\ \textcolor{charliteral}{'\(\backslash\)0'})\{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{char}\ caractere\ =\ exp[i];}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (caractere\ ==\ \textcolor{charliteral}{'('}\ ||\ caractere\ ==\ \textcolor{charliteral}{'['}\ ||\ caractere\ ==\ \textcolor{charliteral}{'\{'})\{\ \textcolor{comment}{//\ Insere\ na\ pilha\ somente\ os\ caracteres\ de\ abertura}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Para\ tratar\ a\ opção\ b,\ foi\ feito\ uso\ dos\ valores\ dos\ caracteres\ de\ delimitação}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00036}00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ na\ tabela\ ASCII,\ onde\ os\ delimitadores\ com\ maior\ precedência\ sempre\ têm\ valores}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00037}00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ númericos\ menores\ que\ os\ de\ menor\ precedência.}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00038}00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00039}00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Exemplo:\ (A\{B-\/C\}*E),\ com\ '('\ estando\ no\ topo\ da\ pilha,\ tenta-\/se\ empilhar\ '\{',}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00040}00040\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ os\ respectivos\ valores\ desses\ caracteres\ em\ decimal\ são\ 40\ e\ 123,\ então\ a\ comparação}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00041}00041\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ feita\ abaixo\ fica:\ 40\ -\/\ 123\ <\ 0\ -\/>\ verdadeiro,\ ou\ seja,\ a\ expressão\ é\ inválida\ pela}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00042}00042\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ opção\ b,\ pois\ o\ '\{'\ está\ numa\ posição\ mais\ interna\ que\ '('.}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00043}00043\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00044}00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{_pilha_8c_a8007eb984b84b3ea7bb76ef6cbedd78b}{estaVazia}}(p)\ \&\&\ (*(\textcolor{keywordtype}{char}\ *)p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}}-\/>\mbox{\hyperlink{structno_a893c237ff9580880d323c6636d0af66b}{chave}}\ -\/\ caractere\ <\ 0))\{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{esvaziaPilha}}(p);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00046}00046\ \ \ \ \ \ \ \ \ free(p);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00048}00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *dadoEmpilhar\ =\ (\textcolor{keywordtype}{char}\ *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dadoEmpilhar\ ==\ NULL)\{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}Erro\ ao\ alocar\ dado.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ *dadoEmpilhar\ =\ caractere;}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pilha_8c_adc224ddc2f13d7f61deecb4b5a4ccaca}{empilha}}(p,\ dadoEmpilhar);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (caractere\ ==\ \textcolor{charliteral}{')'}\ ||\ caractere\ ==\ \textcolor{charliteral}{']'}\ ||\ caractere\ ==\ \textcolor{charliteral}{'\}'})\{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_pilha_8c_a8007eb984b84b3ea7bb76ef6cbedd78b}{estaVazia}}(p))\{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{esvaziaPilha}}(p);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00060}00060\ \ \ \ \ \ \ \ \ free(p);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00062}00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00063}00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ topo\ =\ *(\textcolor{keywordtype}{char}\ *)\mbox{\hyperlink{_pilha_8c_add7747bf27459e299479ad7492aa7bbd}{desempilha}}(p);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((caractere\ ==\ \textcolor{charliteral}{')'}\ \&\&\ topo\ !=\ \textcolor{charliteral}{'('})\ ||}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ (caractere\ ==\ \textcolor{charliteral}{']'}\ \&\&\ topo\ !=\ \textcolor{charliteral}{'['})\ ||}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ (caractere\ ==\ \textcolor{charliteral}{'\}'}\ \&\&\ topo\ !=\ \textcolor{charliteral}{'\{'}))\{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{esvaziaPilha}}(p);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ free(p);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00073}00073\ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{int}\ valida\ =\ \mbox{\hyperlink{_pilha_8c_a8007eb984b84b3ea7bb76ef6cbedd78b}{estaVazia}}(p);\ \textcolor{comment}{//\ A\ pilha\ deve\ estar\ vazia\ para\ garantir\ que\ não\ há\ delimitadores\ de\ abertura\ sem\ fechamento}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{esvaziaPilha}}(p);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00077}00077\ \ \ \ \ free(p);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ valida;}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00085}\mbox{\hyperlink{programa1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00085}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{programa1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{char}\ expressao[512];}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00087}00087\ \ \ \ \ fflush(stdin);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00088}00088\ \ \ \ \ fgets(expressao,\ 512,\ stdin);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00090}00090\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}{validarExpressao}}(expressao))\{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00091}00091\ \ \ \ \ printf(\textcolor{stringliteral}{"{}VALIDA\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00094}00094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}INVALIDA\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_SUCCESS;}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00098}00098\ \}}
+
+\end{DoxyCode}

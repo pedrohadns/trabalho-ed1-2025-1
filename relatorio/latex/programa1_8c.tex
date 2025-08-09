@@ -1,0 +1,151 @@
+\doxysection{Referência do Arquivo C\+:/\+Users/pedro/\+One\+Drive/\+Documentos/\+Estudos/3º Período/\+Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c}
+\hypertarget{programa1_8c}{}\label{programa1_8c}\index{C:/Users/pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c@{C:/Users/pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c}}
+
+
+Arquivo com a implementação do programa 1 para validação de expressões matemáticas.  
+
+
+{\ttfamily \#include "{}Pilha.\+h"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}{validar\+Expressao}} (char \texorpdfstring{$\ast$}{*}exp)
+\begin{DoxyCompactList}\small\item\em Função que valida expressões matemáticas conforme seus delimitadores. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{programa1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Função para utilizar o programa, aceita como entrada a expressão que deseja que seja validada e imprime na tela se é válida ou não. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Arquivo com a implementação do programa 1 para validação de expressões matemáticas. 
+
+\begin{DoxyAuthor}{Autores}
+Davi Brandão de Souza 
+
+Mauricio Zanetti Neto 
+
+Pedro Henrique Alves do Nascimento 
+
+Silvio Eduardo Belinazzi de Andrade
+\end{DoxyAuthor}
+agosto 2025 
+
+Definição no arquivo \mbox{\hyperlink{programa1_8c_source}{programa1.\+c}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{programa1_8c_doc-func-members}
+\doxysubsection{Funções}
+\Hypertarget{programa1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{programa1.c@{programa1.c}!main@{main}}
+\index{main@{main}!programa1.c@{programa1.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{programa1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Função para utilizar o programa, aceita como entrada a expressão que deseja que seja validada e imprime na tela se é válida ou não. 
+
+
+
+Definição na linha \mbox{\hyperlink{programa1_8c_source_l00085}{85}} do arquivo \mbox{\hyperlink{programa1_8c_source}{programa1.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{char}\ expressao[512];}
+\DoxyCodeLine{00087\ \ \ \ \ fflush(stdin);}
+\DoxyCodeLine{00088\ \ \ \ \ fgets(expressao,\ 512,\ stdin);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}{validarExpressao}}(expressao))\{}
+\DoxyCodeLine{00091\ \ \ \ \ printf(\textcolor{stringliteral}{"{}VALIDA\(\backslash\)n"{}});}
+\DoxyCodeLine{00092\ \ \ \ \ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}INVALIDA\(\backslash\)n"{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_SUCCESS;}
+\DoxyCodeLine{00098\ \}}
+
+\end{DoxyCode}
+\Hypertarget{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}\index{programa1.c@{programa1.c}!validarExpressao@{validarExpressao}}
+\index{validarExpressao@{validarExpressao}!programa1.c@{programa1.c}}
+\doxysubsubsection{\texorpdfstring{validarExpressao()}{validarExpressao()}}
+{\footnotesize\ttfamily \label{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5} 
+int validar\+Expressao (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{exp}{}\end{DoxyParamCaption})}
+
+
+
+Função que valida expressões matemáticas conforme seus delimitadores. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em exp} & Expressão que deve ser validada ({\itshape string}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna 0 para uma expressão inválida e 1 para uma expressão válida. 
+\end{DoxyReturn}
+
+
+Definição na linha \mbox{\hyperlink{programa1_8c_source_l00027}{27}} do arquivo \mbox{\hyperlink{programa1_8c_source}{programa1.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (exp\ ==\ NULL)\{\ \textcolor{keywordflow}{return}\ 0;\ \}}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{struct_pilha}{Pilha}}\ *p\ =\ \mbox{\hyperlink{_pilha_8c_a99a641c6e419e5ed1a4c4a80e195f33d}{criaPilha}}();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{while}\ (exp[i]\ !=\ \textcolor{charliteral}{'\(\backslash\)0'})\{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{char}\ caractere\ =\ exp[i];}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordflow}{if}\ (caractere\ ==\ \textcolor{charliteral}{'('}\ ||\ caractere\ ==\ \textcolor{charliteral}{'['}\ ||\ caractere\ ==\ \textcolor{charliteral}{'\{'})\{\ \textcolor{comment}{//\ Insere\ na\ pilha\ somente\ os\ caracteres\ de\ abertura}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Para\ tratar\ a\ opção\ b,\ foi\ feito\ uso\ dos\ valores\ dos\ caracteres\ de\ delimitação }}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ na\ tabela\ ASCII,\ onde\ os\ delimitadores\ com\ maior\ precedência\ sempre\ têm\ valores }}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ númericos\ menores\ que\ os\ de\ menor\ precedência. }}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ Exemplo:\ (A\{B-\/C\}*E),\ com\ '('\ estando\ no\ topo\ da\ pilha,\ tenta-\/se\ empilhar\ '\{', }}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ os\ respectivos\ valores\ desses\ caracteres\ em\ decimal\ são\ 40\ e\ 123,\ então\ a\ comparação }}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ feita\ abaixo\ fica:\ 40\ -\/\ 123\ <\ 0\ -\/>\ verdadeiro,\ ou\ seja,\ a\ expressão\ é\ inválida\ pela }}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ *\ opção\ b,\ pois\ o\ '\{'\ está\ numa\ posição\ mais\ interna\ que\ '('. }}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ \ \ \ \ \ \ \ \ */}}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{_pilha_8c_a8007eb984b84b3ea7bb76ef6cbedd78b}{estaVazia}}(p)\ \&\&\ (*(\textcolor{keywordtype}{char}\ *)p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}}-\/>\mbox{\hyperlink{structno_a893c237ff9580880d323c6636d0af66b}{chave}}\ -\/\ caractere\ <\ 0))\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{esvaziaPilha}}(p);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ free(p);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ *dadoEmpilhar\ =\ (\textcolor{keywordtype}{char}\ *)malloc(\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dadoEmpilhar\ ==\ NULL)\{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ perror(\textcolor{stringliteral}{"{}Erro\ ao\ alocar\ dado.\(\backslash\)n"{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ exit(1);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ *dadoEmpilhar\ =\ caractere;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pilha_8c_adc224ddc2f13d7f61deecb4b5a4ccaca}{empilha}}(p,\ dadoEmpilhar);}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (caractere\ ==\ \textcolor{charliteral}{')'}\ ||\ caractere\ ==\ \textcolor{charliteral}{']'}\ ||\ caractere\ ==\ \textcolor{charliteral}{'\}'})\{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{_pilha_8c_a8007eb984b84b3ea7bb76ef6cbedd78b}{estaVazia}}(p))\{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{esvaziaPilha}}(p);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ free(p);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ topo\ =\ *(\textcolor{keywordtype}{char}\ *)\mbox{\hyperlink{_pilha_8c_add7747bf27459e299479ad7492aa7bbd}{desempilha}}(p);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((caractere\ ==\ \textcolor{charliteral}{')'}\ \&\&\ topo\ !=\ \textcolor{charliteral}{'('})\ ||}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ (caractere\ ==\ \textcolor{charliteral}{']'}\ \&\&\ topo\ !=\ \textcolor{charliteral}{'['})\ ||}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ (caractere\ ==\ \textcolor{charliteral}{'\}'}\ \&\&\ topo\ !=\ \textcolor{charliteral}{'\{'}))\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{esvaziaPilha}}(p);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ free(p);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ i++;}
+\DoxyCodeLine{00074\ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ valida\ =\ \mbox{\hyperlink{_pilha_8c_a8007eb984b84b3ea7bb76ef6cbedd78b}{estaVazia}}(p);\ \textcolor{comment}{//\ A\ pilha\ deve\ estar\ vazia\ para\ garantir\ que\ não\ há\ delimitadores\ de\ abertura\ sem\ fechamento}}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{esvaziaPilha}}(p);}
+\DoxyCodeLine{00077\ \ \ \ \ free(p);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{return}\ valida;}
+\DoxyCodeLine{00080\ \}}
+
+\end{DoxyCode}

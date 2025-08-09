@@ -1,5 +1,5 @@
-\doxysection{Referência do Arquivo Pilha.\+h}
-\hypertarget{_pilha_8h}{}\label{_pilha_8h}\index{Pilha.h@{Pilha.h}}
+\doxysection{Referência do Arquivo C\+:/\+Users/pedro/\+One\+Drive/\+Documentos/\+Estudos/3º Período/\+Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/\+Pilha.h}
+\hypertarget{_pilha_8h}{}\label{_pilha_8h}\index{C:/Users/pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/Pilha.h@{C:/Users/pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/Pilha.h}}
 
 
 Arquivo header com a declaração de structs e funções para implementação da pilha utilizando lista simplesmente encadeada com nó cabeça.  
@@ -32,8 +32,10 @@ int \mbox{\hyperlink{_pilha_8h_a8007eb984b84b3ea7bb76ef6cbedd78b}{esta\+Vazia}} 
 \begin{DoxyCompactList}\small\item\em Verifica se a pilha está vazia ou não. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprime\+CB}} (void \texorpdfstring{$\ast$}{*}valor)
 \begin{DoxyCompactList}\small\item\em Função {\itshape callback} para impressão de tipo genérico de dado. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{_pilha_8h_adeb206688bdef1116177382a6c38d742}{imprime\+Pilha}} (\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}} \texorpdfstring{$\ast$}{*}p, void(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprime\+CB}})(void \texorpdfstring{$\ast$}{*}))
-\begin{DoxyCompactList}\small\item\em Imprime todos elementos da pilha. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{_pilha_8h_aabd34b0f38809d3c11a747538f569dc5}{imprime\+Pilha}} (\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}p, void(\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprime\+CB}})(void \texorpdfstring{$\ast$}{*}))
+\begin{DoxyCompactList}\small\item\em Imprime todos elementos da pilha. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_pilha_8h_a896788aa581277a3c412734b92e76d80}{esvazia\+Pilha}} (\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}p)
+\begin{DoxyCompactList}\small\item\em Esvazia uma dada pilha, liberando a memória de cada nó (sem liberar o ponteiro da pilha em si). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
@@ -236,6 +238,36 @@ Definição na linha \mbox{\hyperlink{_pilha_8c_source_l00067}{67}} do arquivo \
 \DoxyCodeLine{00071\ \}}
 
 \end{DoxyCode}
+\Hypertarget{_pilha_8h_a896788aa581277a3c412734b92e76d80}\index{Pilha.h@{Pilha.h}!esvaziaPilha@{esvaziaPilha}}
+\index{esvaziaPilha@{esvaziaPilha}!Pilha.h@{Pilha.h}}
+\doxysubsubsection{\texorpdfstring{esvaziaPilha()}{esvaziaPilha()}}
+{\footnotesize\ttfamily \label{_pilha_8h_a896788aa581277a3c412734b92e76d80} 
+void esvazia\+Pilha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}}]{p}{}\end{DoxyParamCaption})}
+
+
+
+Esvazia uma dada pilha, liberando a memória de cada nó (sem liberar o ponteiro da pilha em si). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em p} & \doxylink{struct_pilha}{Pilha} a ser esvaziada. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+void. 
+\end{DoxyReturn}
+
+
+Definição na linha \mbox{\hyperlink{_pilha_8c_source_l00084}{84}} do arquivo \mbox{\hyperlink{_pilha_8c_source}{Pilha.\+c}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00085\ \{}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\ ==\ NULL)\{\ \textcolor{keywordflow}{return};\ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{while}\ (p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}}\ !=\ NULL)\{\ \mbox{\hyperlink{_pilha_8c_add7747bf27459e299479ad7492aa7bbd}{desempilha}}(p);\ \}}
+\DoxyCodeLine{00088\ \}}
+
+\end{DoxyCode}
 \Hypertarget{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}\index{Pilha.h@{Pilha.h}!imprimeCB@{imprimeCB}}
 \index{imprimeCB@{imprimeCB}!Pilha.h@{Pilha.h}}
 \doxysubsubsection{\texorpdfstring{imprimeCB()}{imprimeCB()}}
@@ -254,11 +286,11 @@ Função {\itshape callback} para impressão de tipo genérico de dado.
 \begin{DoxyReturn}{Retorna}
 void. 
 \end{DoxyReturn}
-\Hypertarget{_pilha_8h_adeb206688bdef1116177382a6c38d742}\index{Pilha.h@{Pilha.h}!imprimePilha@{imprimePilha}}
+\Hypertarget{_pilha_8h_aabd34b0f38809d3c11a747538f569dc5}\index{Pilha.h@{Pilha.h}!imprimePilha@{imprimePilha}}
 \index{imprimePilha@{imprimePilha}!Pilha.h@{Pilha.h}}
 \doxysubsubsection{\texorpdfstring{imprimePilha()}{imprimePilha()}}
-{\footnotesize\ttfamily \label{_pilha_8h_adeb206688bdef1116177382a6c38d742} 
-void imprime\+Pilha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}} \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{void(\texorpdfstring{$\ast$}{*}}]{imprime\+CB~}{)(void \texorpdfstring{$\ast$}{*})}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{_pilha_8h_aabd34b0f38809d3c11a747538f569dc5} 
+void imprime\+Pilha (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_pilha}{Pilha}} \texorpdfstring{$\ast$}{*}}]{p}{, }\item[{void(\texorpdfstring{$\ast$}{*}}]{imprime\+CB~}{)(void \texorpdfstring{$\ast$}{*})}\end{DoxyParamCaption})}
 
 
 
@@ -282,7 +314,7 @@ Definição na linha \mbox{\hyperlink{_pilha_8c_source_l00073}{73}} do arquivo \
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00074\ \{}
 \DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\ ==\ NULL)\{\ \textcolor{keywordflow}{return};\ \}}
-\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *aux\ =\ p;}
+\DoxyCodeLine{00076\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *aux\ =\ p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}};}
 \DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)\{}
 \DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprimeCB}}(aux-\/>\mbox{\hyperlink{structno_a893c237ff9580880d323c6636d0af66b}{chave}});}
 \DoxyCodeLine{00079\ \ \ \ \ aux\ =\ aux-\/>\mbox{\hyperlink{structno_ac62f0e6cfd4c2f2cf975d243d16c8046}{prox}};}
