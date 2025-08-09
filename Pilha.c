@@ -70,10 +70,10 @@ int estaVazia(Pilha *p)
     return (p->tamanho == 0);
 }
 
-void imprimePilha(No *p, void (*imprimeCB)(void*))
+void imprimePilha(Pilha *p, void (*imprimeCB)(void*))
 {
     if (p == NULL){ return; }
-    No *aux = p;
+    No *aux = p->topo;
     while (aux != NULL){
 	imprimeCB(aux->chave);
 	aux = aux->prox;
