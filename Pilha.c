@@ -80,3 +80,9 @@ void imprimePilha(No *p, void (*imprimeCB)(void*))
     }
     printf("\n");
 }
+
+void esvaziaPilha(Pilha *p)
+{
+    if (p == NULL){ return; }
+    while (p->topo != NULL){ desempilha(p); }
+}
