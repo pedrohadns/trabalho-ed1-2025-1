@@ -1,0 +1,28 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {brazil}{}\relax 
+\contentsline {chapter}{\numberline {1}Índice das Estruturas de Dados}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Estruturas de Dados}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}Índice dos Arquivos}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Lista de Arquivos}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Estruturas}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Referência da Estrutura Nó}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Descrição detalhada}{5}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Referência da Estrutura no}{5}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Descrição detalhada}{5}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Campos}{6}{subsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.2.1}chave}{6}{subsubsection.3.2.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2.2}prox}{6}{subsubsection.3.2.2.2}%
+\contentsline {chapter}{\numberline {4}Arquivos}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Referência do Arquivo Pilha.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Descrição detalhada}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Funções}{7}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}criaNo()}{7}{subsubsection.4.1.2.1}%
+\contentsline {section}{\numberline {4.2}Pilha.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{8}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Referência do Arquivo Pilha.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{8}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Descrição detalhada}{9}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Definições dos tipos}{9}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}No}{9}{subsubsection.4.3.2.1}%
+\contentsline {subsection}{\numberline {4.3.3}Funções}{9}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}criaNo()}{9}{subsubsection.4.3.3.1}%
+\contentsline {section}{\numberline {4.4}Pilha.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{10}{section.4.4}%
+\contentsline {chapter}{\'Indice Remissivo}{11}{section*.6}%
