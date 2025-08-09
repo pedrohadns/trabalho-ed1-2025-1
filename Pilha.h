@@ -86,4 +86,11 @@ void imprimeCB(void *valor);
  */
 void imprimePilha(No *p, void (*imprimeCB)(void*));
 
+/**
+ * @brief Esvazia uma dada pilha, liberando a memória de cada nó (sem liberar o ponteiro da pilha em si).
+ * @param p Pilha a ser esvaziada.
+ * @return void.
+ */
+void esvaziaPilha(Pilha *p);
+
 #endif
