@@ -83,16 +83,16 @@ int validarExpressao(char *exp)
  * @brief Função para utilizar o programa, aceita como entrada a expressão que deseja que seja validada e imprime na tela se é válida ou não.
  */
 int main() {
+    int execucao = 1;
     char expressao[512];
-    fflush(stdin);
-    fgets(expressao, 512, stdin);
-
-    if (validarExpressao(expressao)){
-	printf("VALIDA\n");
+    while (execucao != 0){
+	printf("Digite a expressão: ");
+	getchar();
+	fgets(expressao, 512, stdin);
+	if (validarExpressao(expressao)){ printf("VALIDA\n"); }
+	else{ printf("INVALIDA\n"); }
+	printf("Deseja validar outra expressão? (0-Não/1-Sim) ");
+	scanf(" %d", &execucao);
     }
-    else{
-	printf("INVALIDA\n");
-    }
-
     return EXIT_SUCCESS;
 }

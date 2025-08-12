@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Grupo 4 - Trabalho Estrutura de Dados 1 2025/1: Código-Fonte de C:/Users/pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-ed1-2025-1/programa1.c</title>
+<title>Grupo 4 - Trabalho Estrutura de Dados 1 2025/1: Código-Fonte de C:/Users/Pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-ed1-2025-1/programa1.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,7 +89,7 @@ $(function(){initNavTree('programa1_8c_source.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">C:/Users/pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-ed1-2025-1/programa1.c</div></div>
+  <div class="headertitle"><div class="title">programa1.c</div></div>
 </div><!--header-->
 <div class="contents">
 <a href="programa1_8c.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/* Grupo 4</span></div>
@@ -162,17 +162,17 @@ $(function(){initNavTree('programa1_8c_source.html','',''); });
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span></div>
 <div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="programa1_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   85</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="programa1_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>() {</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">char</span> expressao[512];</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    fflush(stdin);</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    fgets(expressao, 512, stdin);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="programa1_8c.html#a92d99c836ac697399cbc563b2cd96ec5">validarExpressao</a>(expressao)){</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    printf(<span class="stringliteral">&quot;VALIDA\n&quot;</span>);</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">else</span>{</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    printf(<span class="stringliteral">&quot;INVALIDA\n&quot;</span>);</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    }</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">int</span> execucao = 1;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordtype">char</span> expressao[512];</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">while</span> (execucao != 0){</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    printf(<span class="stringliteral">&quot;Digite a expressão: &quot;</span>);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    getchar();</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    fgets(expressao, 512, stdin);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="keywordflow">if</span> (<a class="code hl_function" href="programa1_8c.html#a92d99c836ac697399cbc563b2cd96ec5">validarExpressao</a>(expressao)){ printf(<span class="stringliteral">&quot;VALIDA\n&quot;</span>); }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordflow">else</span>{ printf(<span class="stringliteral">&quot;INVALIDA\n&quot;</span>); }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    printf(<span class="stringliteral">&quot;Deseja validar outra expressão? (0-Não/1-Sim) &quot;</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    scanf(<span class="stringliteral">&quot; %d&quot;</span>, &amp;execucao);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}</div>
 </div>
@@ -193,7 +193,7 @@ $(function(){initNavTree('programa1_8c_source.html','',''); });
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="programa1_8c.html">programa1.c</a></li>
+    <li class="navelem"><a href="dir_ded2a7f905c2d34630c595c5cf4eb434.html">OneDrive</a></li><li class="navelem"><a href="dir_57f8dac124d298077b1cab296a12117e.html">Documentos</a></li><li class="navelem"><a href="dir_ba4154a5283af3901f2dc7840dae0f8f.html">Estudos</a></li><li class="navelem"><a href="dir_86dfef63e542bca5166e5bbd8f416da4.html">3º Período</a></li><li class="navelem"><a href="dir_9e21147706df0032b4d93b6a63ab7ccd.html">Estrutura de Dados I</a></li><li class="navelem"><a href="dir_354e547565561db9b2b7203848d234c1.html">trabalho-ed1-2025-1</a></li><li class="navelem"><a href="programa1_8c.html">programa1.c</a></li>
     <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

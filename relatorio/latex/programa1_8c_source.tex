@@ -1,5 +1,6 @@
-\doxysection{C\+:/\+Users/pedro/\+One\+Drive/\+Documentos/\+Estudos/3º Período/\+Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c}
-\hypertarget{programa1_8c_source}{}\label{programa1_8c_source}\mbox{\hyperlink{programa1_8c}{Ir para a documentação desse arquivo.}}
+\doxysection{programa1.\+c}
+\hypertarget{programa1_8c_source}{}\label{programa1_8c_source}\index{C:/Users/Pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c@{C:/Users/Pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c}}
+\mbox{\hyperlink{programa1_8c}{Ir para a documentação desse arquivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{programa1_8c_source_l00001}00001\ \textcolor{comment}{/*\ Grupo\ 4}}
 \DoxyCodeLine{\Hypertarget{programa1_8c_source_l00002}00002\ \textcolor{comment}{\ *\ Davi\ Brandão\ de\ Souza}}
@@ -68,17 +69,17 @@
 \DoxyCodeLine{\Hypertarget{programa1_8c_source_l00080}00080\ \}}
 \DoxyCodeLine{\Hypertarget{programa1_8c_source_l00081}00081\ }
 \DoxyCodeLine{\Hypertarget{programa1_8c_source_l00085}\mbox{\hyperlink{programa1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{00085}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{programa1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{char}\ expressao[512];}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00087}00087\ \ \ \ \ fflush(stdin);}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00088}00088\ \ \ \ \ fgets(expressao,\ 512,\ stdin);}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00089}00089\ }
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00090}00090\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}{validarExpressao}}(expressao))\{}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00091}00091\ \ \ \ \ printf(\textcolor{stringliteral}{"{}VALIDA\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00092}00092\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00094}00094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}INVALIDA\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00095}00095\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{int}\ execucao\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00087}00087\ \ \ \ \ \textcolor{keywordtype}{char}\ expressao[512];}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00088}00088\ \ \ \ \ \textcolor{keywordflow}{while}\ (execucao\ !=\ 0)\{}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00089}00089\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Digite\ a\ expressão:\ "{}});}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00090}00090\ \ \ \ \ getchar();}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00091}00091\ \ \ \ \ fgets(expressao,\ 512,\ stdin);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}{validarExpressao}}(expressao))\{\ printf(\textcolor{stringliteral}{"{}VALIDA\(\backslash\)n"{}});\ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{else}\{\ printf(\textcolor{stringliteral}{"{}INVALIDA\(\backslash\)n"{}});\ \}}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00094}00094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Deseja\ validar\ outra\ expressão?\ (0-\/Não/1-\/Sim)\ "{}});}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00095}00095\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \%d"{}},\ \&execucao);}
+\DoxyCodeLine{\Hypertarget{programa1_8c_source_l00096}00096\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{programa1_8c_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_SUCCESS;}
 \DoxyCodeLine{\Hypertarget{programa1_8c_source_l00098}00098\ \}}
 

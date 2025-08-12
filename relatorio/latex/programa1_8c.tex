@@ -1,5 +1,5 @@
-\doxysection{Referência do Arquivo C\+:/\+Users/pedro/\+One\+Drive/\+Documentos/\+Estudos/3º Período/\+Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c}
-\hypertarget{programa1_8c}{}\label{programa1_8c}\index{C:/Users/pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c@{C:/Users/pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c}}
+\doxysection{Referência do Arquivo C\+:/\+Users/\+Pedro/\+One\+Drive/\+Documentos/\+Estudos/3º Período/\+Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c}
+\hypertarget{programa1_8c}{}\label{programa1_8c}\index{C:/Users/Pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c@{C:/Users/Pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/programa1.c}}
 
 
 Arquivo com a implementação do programa 1 para validação de expressões matemáticas.  
@@ -55,17 +55,17 @@ Definição na linha \mbox{\hyperlink{programa1_8c_source_l00085}{85}} do arquiv
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{char}\ expressao[512];}
-\DoxyCodeLine{00087\ \ \ \ \ fflush(stdin);}
-\DoxyCodeLine{00088\ \ \ \ \ fgets(expressao,\ 512,\ stdin);}
-\DoxyCodeLine{00089\ }
-\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}{validarExpressao}}(expressao))\{}
-\DoxyCodeLine{00091\ \ \ \ \ printf(\textcolor{stringliteral}{"{}VALIDA\(\backslash\)n"{}});}
-\DoxyCodeLine{00092\ \ \ \ \ \}}
-\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{else}\{}
-\DoxyCodeLine{00094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}INVALIDA\(\backslash\)n"{}});}
-\DoxyCodeLine{00095\ \ \ \ \ \}}
-\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{int}\ execucao\ =\ 1;}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordtype}{char}\ expressao[512];}
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordflow}{while}\ (execucao\ !=\ 0)\{}
+\DoxyCodeLine{00089\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Digite\ a\ expressão:\ "{}});}
+\DoxyCodeLine{00090\ \ \ \ \ getchar();}
+\DoxyCodeLine{00091\ \ \ \ \ fgets(expressao,\ 512,\ stdin);}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{programa1_8c_a92d99c836ac697399cbc563b2cd96ec5}{validarExpressao}}(expressao))\{\ printf(\textcolor{stringliteral}{"{}VALIDA\(\backslash\)n"{}});\ \}}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{else}\{\ printf(\textcolor{stringliteral}{"{}INVALIDA\(\backslash\)n"{}});\ \}}
+\DoxyCodeLine{00094\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Deseja\ validar\ outra\ expressão?\ (0-\/Não/1-\/Sim)\ "{}});}
+\DoxyCodeLine{00095\ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\ \%d"{}},\ \&execucao);}
+\DoxyCodeLine{00096\ \ \ \ \ \}}
 \DoxyCodeLine{00097\ \ \ \ \ \textcolor{keywordflow}{return}\ EXIT\_SUCCESS;}
 \DoxyCodeLine{00098\ \}}
 

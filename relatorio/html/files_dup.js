@@ -1,6 +1,4 @@
 var files_dup =
 [
-    [ "Pilha.c", "_pilha_8c.html", "_pilha_8c" ],
-    [ "Pilha.h", "_pilha_8h.html", "_pilha_8h" ],
-    [ "programa1.c", "programa1_8c.html", "programa1_8c" ]
+    [ "OneDrive", "dir_ded2a7f905c2d34630c595c5cf4eb434.html", "dir_ded2a7f905c2d34630c595c5cf4eb434" ]
 ];
