@@ -1,3 +1,19 @@
+/** Grupo 4
+ * Davi Brandão de Souza
+ * Silvio Eduardo Belinazzi de Andrade
+ * Mauricio Zanetti Neto
+ * Pedro Henrique Alves do Nascimento
+ */
+
+/**
+ * @file programa3.c
+ * @brief Implementação das funções para contagem de cômodos em uma planta de casa.
+ * @authors Davi Brandão de Souza
+ * @authors Mauricio Zanetti Neto
+ * @authors Pedro Henrique Alves do Nascimento
+ * @authors Silvio Eduardo Belinazzi de Andrade
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
@@ -5,11 +21,31 @@
 
 #define MAX 1000
 
+/**
+ * @struct Posicao
+ * @brief Representa uma posição no mapa com coordenadas (x, y).
+ */
+
 typedef struct
 {
-    int x;
-    int y;
+    int x; /**< Coordenada x (linha) */
+    int y; /**< Coordenada y (coluna) */
 } Posicao;
+
+/**
+ * @brief Verifica se uma posição (x,y) é válida para visitar no mapa.
+ *
+ * Uma posição é válida se estiver dentro dos limites, for um espaço livre ('.')
+ * e ainda não foi processada.
+ *
+ * @param x Coordenada x (linha) da posição.
+ * @param y Coordenada y (coluna) da posição.
+ * @param n Número de linhas do mapa.
+ * @param m Número de colunas do mapa.
+ * @param mapa Matriz que representa o mapa, com '.' para espaço livre.
+ * @param processado Matriz booleana que indica posições já processadas (agendadas para visitação).
+ * @return true se a posição for válida para visitar, false caso contrário.
+ */
 
 bool posicaoValida(int x, int y, int n, int m, char mapa[MAX][MAX], bool processado[MAX][MAX])
 {
@@ -18,6 +54,21 @@ bool posicaoValida(int x, int y, int n, int m, char mapa[MAX][MAX], bool process
     else
         return false;
 }
+
+/**
+ * @brief Explora um cômodo do mapa a partir da posição inicial usando busca em profundidade.
+ *
+ * Utilizando uma pilha, a função empilha posições válidas conectadas, e desempilha para explorar seus vizinhos, 
+ * marcando posições como processadas para evitar visitas repetidas.
+ *
+ * @param pilha Ponteiro para a pilha usada para controle da exploração.
+ * @param x0 Coordenada x (linha) inicial para começar a visita.
+ * @param y0 Coordenada y (coluna) inicial para começar a visita.
+ * @param n Número de linhas do mapa.
+ * @param m Número de colunas do mapa.
+ * @param mapa Matriz do mapa com '.' indicando espaços livres.
+ * @param processado Matriz booleana que indica posições já processadas.
+ */
 
 void visitarComodo(Pilha *pilha, int x0, int y0, int n, int m, char mapa[MAX][MAX], bool processado[MAX][MAX])
 {
@@ -55,6 +106,18 @@ void visitarComodo(Pilha *pilha, int x0, int y0, int n, int m, char mapa[MAX][MA
     }
 }
 
+/**
+ * @brief Conta o número de cômodos (áreas conectadas de '.') no mapa.
+ *
+ * Percorre o mapa, e para cada ponto não processado que seja '.' chama a função visitarComodo,
+ * que marca todo o cômodo como processado.
+ *
+ * @param n Número de linhas do mapa.
+ * @param m Número de colunas do mapa.
+ * @param mapa Matriz do mapa.
+ * @return O total de cômodos encontrados no mapa.
+ */
+
 int contaComodos(int n, int m, char mapa[MAX][MAX])
 {
     bool processado[MAX][MAX] = {false};
@@ -76,6 +139,15 @@ int contaComodos(int n, int m, char mapa[MAX][MAX])
     free(pilha);
     return totalComodos;
 }
+
+/**
+ * @brief Função principal do programa.
+ *
+ * Lê as dimensões do mapa, lê o mapa da entrada,
+ * calcula o número de cômodos e imprime o resultado.
+ *
+ * @return 0 se a execução ocorreu com sucesso.
+ */
 
 int main()
 {
