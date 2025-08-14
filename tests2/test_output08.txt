@@ -1,0 +1,2 @@
+Digite o tipo da entrada, a-infixa/b-posfixa: Digite a expressão: DAB+*FH^-J/A+
+Digite o valor de A: Digite o valor de B: Digite o valor de D: Digite o valor de F: Digite o valor de H: Digite o valor de J: Resultado: 6.25

@@ -1,10 +1,10 @@
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS =
 
 programa1:p1.o Pilha.o
 	$(CC) $(CFLAGS) -o $@ $^
 programa2:p2.o Pilha.o
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -lm
 programa3: p3.o Pilha.o
 	$(CC) $(CFLAGS) -o $@ $^
 

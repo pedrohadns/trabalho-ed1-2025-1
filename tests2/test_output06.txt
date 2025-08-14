@@ -1,0 +1,1 @@
+Digite o tipo da entrada, a-infixa/b-posfixa: Erro, tipo inválido.

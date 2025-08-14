@@ -1,8 +1,8 @@
 /* Grupo 4
  * Davi Brandão de Souza
- * Silvio Eduardo Belinazzi de Andrade
  * Mauricio Zanetti Neto
  * Pedro Henrique Alves do Nascimento
+ * Silvio Eduardo Belinazzi de Andrade
  */
 
 /**
@@ -20,18 +20,20 @@
 
 /**
  * @struct Nó
- * @brief Estrutura para o nó de uma pilha que armazena tipo genérico de dado em seu campo chave. 
+ * @brief Estrutura para o nó de uma pilha que armazena tipo genérico de dado em seu campo chave.
  */
-typedef struct no{
-    void *chave; ///< Campo para armazenar os dados
-    struct no *prox;    ///< Ponteiro para o próximo nó da pilha
+typedef struct no
+{
+    void *chave;     ///< Campo para armazenar os dados
+    struct no *prox; ///< Ponteiro para o próximo nó da pilha
 } No;
 
 /**
  * @struct Pilha
  * @brief Estrutura que armazena o topo de uma pilha.
  */
-typedef struct{
+typedef struct
+{
     No *topo;
     int tamanho;
 } Pilha;
@@ -84,7 +86,7 @@ void imprimeCB(void *valor);
  * @param imprimeCB Função *callback* para imprimir cada elemento da pilha.
  * @return void.
  */
-void imprimePilha(Pilha *p, void (*imprimeCB)(void*));
+void imprimePilha(Pilha *p, void (*imprimeCB)(void *));
 
 /**
  * @brief Esvazia uma dada pilha, liberando a memória de cada nó (sem liberar o ponteiro da pilha em si).
@@ -92,5 +94,12 @@ void imprimePilha(Pilha *p, void (*imprimeCB)(void*));
  * @return void.
  */
 void esvaziaPilha(Pilha *p);
+
+/**
+ * @brief Retorna o valor armazenado no topo da pilha, sem removê-lo.
+ * @param p A pilha a ser inspecionada.
+ * @return Ponteiro para o valor que está no topo da pilha, ou NULL caso a pilha esteja vazia ou não tenha sido inicializada.
+ */
+void *topoPilha(Pilha *p);
 
 #endif

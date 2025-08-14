@@ -1,0 +1,1 @@
+Digite o tipo da entrada, a-infixa/b-posfixa: Digite a expressão: Digite o valor de A: Digite o valor de B: Digite o valor de C: Digite o valor de D: Resultado: 9.00

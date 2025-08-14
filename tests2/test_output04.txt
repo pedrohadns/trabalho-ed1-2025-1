@@ -1,0 +1,2 @@
+Digite o tipo da entrada, a-infixa/b-posfixa: Digite a expressão: AB/
+Digite o valor de A: Digite o valor de B: Resultado: 2.50
