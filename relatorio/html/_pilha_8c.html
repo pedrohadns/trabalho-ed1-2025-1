@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Grupo 4 - Trabalho Estrutura de Dados 1 2025/1: Referência do Arquivo Pilha.c</title>
+<title>Grupo 4 - Trabalho Estrutura de Dados 1 2025/1: Referência do Arquivo C:/Users/Pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-ed1-2025-1/Pilha.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -113,8 +113,10 @@ Funções</h2></td></tr>
 <tr class="memdesc:add7747bf27459e299479ad7492aa7bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Desempilha um elemento da pilha <span class="tt">p</span>, liberando a memória que ele ocupa e retornando o valor que estava no topo.  <br /></td></tr>
 <tr class="memitem:a8007eb984b84b3ea7bb76ef6cbedd78b" id="r_a8007eb984b84b3ea7bb76ef6cbedd78b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8007eb984b84b3ea7bb76ef6cbedd78b">estaVazia</a> (<a class="el" href="struct_pilha.html">Pilha</a> *p)</td></tr>
 <tr class="memdesc:a8007eb984b84b3ea7bb76ef6cbedd78b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se a pilha está vazia ou não.  <br /></td></tr>
-<tr class="memitem:adeb206688bdef1116177382a6c38d742" id="r_adeb206688bdef1116177382a6c38d742"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adeb206688bdef1116177382a6c38d742">imprimePilha</a> (<a class="el" href="_pilha_8h.html#a3020fca858045abd38860fbd8a7c1383">No</a> *p, void(*<a class="el" href="_pilha_8h.html#a16b8bd165fa268fbc474e98a9f1ce309">imprimeCB</a>)(void *))</td></tr>
-<tr class="memdesc:adeb206688bdef1116177382a6c38d742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime todos elementos da pilha.  <br /></td></tr>
+<tr class="memitem:aabd34b0f38809d3c11a747538f569dc5" id="r_aabd34b0f38809d3c11a747538f569dc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aabd34b0f38809d3c11a747538f569dc5">imprimePilha</a> (<a class="el" href="struct_pilha.html">Pilha</a> *p, void(*<a class="el" href="_pilha_8h.html#a16b8bd165fa268fbc474e98a9f1ce309">imprimeCB</a>)(void *))</td></tr>
+<tr class="memdesc:aabd34b0f38809d3c11a747538f569dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Imprime todos elementos da pilha.  <br /></td></tr>
+<tr class="memitem:a896788aa581277a3c412734b92e76d80" id="r_a896788aa581277a3c412734b92e76d80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a896788aa581277a3c412734b92e76d80">esvaziaPilha</a> (<a class="el" href="struct_pilha.html">Pilha</a> *p)</td></tr>
+<tr class="memdesc:a896788aa581277a3c412734b92e76d80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Esvazia uma dada pilha, liberando a memória de cada nó (sem liberar o ponteiro da pilha em si).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>Arquivo com a implementação das funções para a pilha. </p>
@@ -316,8 +318,41 @@ Silvio Eduardo Belinazzi de Andrade</dd></dl>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="adeb206688bdef1116177382a6c38d742" name="adeb206688bdef1116177382a6c38d742"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adeb206688bdef1116177382a6c38d742">&#9670;&#160;</a></span>imprimePilha()</h2>
+<a id="a896788aa581277a3c412734b92e76d80" name="a896788aa581277a3c412734b92e76d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a896788aa581277a3c412734b92e76d80">&#9670;&#160;</a></span>esvaziaPilha()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void esvaziaPilha </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_pilha.html">Pilha</a> *</td>          <td class="paramname"><span class="paramname"><em>p</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Esvazia uma dada pilha, liberando a memória de cada nó (sem liberar o ponteiro da pilha em si). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td><a class="el" href="struct_pilha.html" title="Estrutura que armazena o topo de uma pilha.">Pilha</a> a ser esvaziada. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>void. </dd></dl>
+
+<p class="definition">Definição na linha <a class="el" href="_pilha_8c_source.html#l00084">84</a> do arquivo <a class="el" href="_pilha_8c_source.html">Pilha.c</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   85</span>{</div>
+<div class="line"><span class="lineno">   86</span>    <span class="keywordflow">if</span> (p == NULL){ <span class="keywordflow">return</span>; }</div>
+<div class="line"><span class="lineno">   87</span>    <span class="keywordflow">while</span> (p-&gt;<a class="code hl_variable" href="struct_pilha.html#ad5d3a7ee0d7166e2558e371e2940aa43">topo</a> != NULL){ <a class="code hl_function" href="#add7747bf27459e299479ad7492aa7bbd">desempilha</a>(p); }</div>
+<div class="line"><span class="lineno">   88</span>}</div>
+<div class="ttc" id="a_pilha_8c_html_add7747bf27459e299479ad7492aa7bbd"><div class="ttname"><a href="#add7747bf27459e299479ad7492aa7bbd">desempilha</a></div><div class="ttdeci">void * desempilha(Pilha *p)</div><div class="ttdoc">Desempilha um elemento da pilha p, liberando a memória que ele ocupa e retornando o valor que estava ...</div><div class="ttdef"><b>Definição</b> <a href="_pilha_8c_source.html#l00056">Pilha.c:56</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aabd34b0f38809d3c11a747538f569dc5" name="aabd34b0f38809d3c11a747538f569dc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabd34b0f38809d3c11a747538f569dc5">&#9670;&#160;</a></span>imprimePilha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -325,7 +360,7 @@ Silvio Eduardo Belinazzi de Andrade</dd></dl>
         <tr>
           <td class="memname">void imprimePilha </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_pilha_8h.html#a3020fca858045abd38860fbd8a7c1383">No</a> *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
+          <td class="paramtype"><a class="el" href="struct_pilha.html">Pilha</a> *</td>          <td class="paramname"><span class="paramname"><em>p</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -348,7 +383,7 @@ Silvio Eduardo Belinazzi de Andrade</dd></dl>
 <p class="definition">Definição na linha <a class="el" href="_pilha_8c_source.html#l00073">73</a> do arquivo <a class="el" href="_pilha_8c_source.html">Pilha.c</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   74</span>{</div>
 <div class="line"><span class="lineno">   75</span>    <span class="keywordflow">if</span> (p == NULL){ <span class="keywordflow">return</span>; }</div>
-<div class="line"><span class="lineno">   76</span>    <a class="code hl_typedef" href="_pilha_8h.html#a3020fca858045abd38860fbd8a7c1383">No</a> *aux = p;</div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_typedef" href="_pilha_8h.html#a3020fca858045abd38860fbd8a7c1383">No</a> *aux = p-&gt;<a class="code hl_variable" href="struct_pilha.html#ad5d3a7ee0d7166e2558e371e2940aa43">topo</a>;</div>
 <div class="line"><span class="lineno">   77</span>    <span class="keywordflow">while</span> (aux != NULL){</div>
 <div class="line"><span class="lineno">   78</span>    <a class="code hl_function" href="_pilha_8h.html#a16b8bd165fa268fbc474e98a9f1ce309">imprimeCB</a>(aux-&gt;<a class="code hl_variable" href="structno.html#a893c237ff9580880d323c6636d0af66b">chave</a>);</div>
 <div class="line"><span class="lineno">   79</span>    aux = aux-&gt;<a class="code hl_variable" href="structno.html#ac62f0e6cfd4c2f2cf975d243d16c8046">prox</a>;</div>
@@ -372,7 +407,7 @@ Silvio Eduardo Belinazzi de Andrade</dd></dl>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="_pilha_8c.html">Pilha.c</a></li>
+    <li class="navelem"><a href="dir_ded2a7f905c2d34630c595c5cf4eb434.html">OneDrive</a></li><li class="navelem"><a href="dir_57f8dac124d298077b1cab296a12117e.html">Documentos</a></li><li class="navelem"><a href="dir_ba4154a5283af3901f2dc7840dae0f8f.html">Estudos</a></li><li class="navelem"><a href="dir_86dfef63e542bca5166e5bbd8f416da4.html">3º Período</a></li><li class="navelem"><a href="dir_9e21147706df0032b4d93b6a63ab7ccd.html">Estrutura de Dados I</a></li><li class="navelem"><a href="dir_354e547565561db9b2b7203848d234c1.html">trabalho-ed1-2025-1</a></li><li class="navelem"><a href="_pilha_8c.html">Pilha.c</a></li>
     <li class="footer">Gerado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

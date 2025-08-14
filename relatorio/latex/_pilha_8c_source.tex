@@ -1,5 +1,6 @@
 \doxysection{Pilha.\+c}
-\hypertarget{_pilha_8c_source}{}\label{_pilha_8c_source}\mbox{\hyperlink{_pilha_8c}{Ir para a documentação desse arquivo.}}
+\hypertarget{_pilha_8c_source}{}\label{_pilha_8c_source}\index{C:/Users/Pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/Pilha.c@{C:/Users/Pedro/OneDrive/Documentos/Estudos/3º Período/Estrutura de Dados I/trabalho-\/ed1-\/2025-\/1/Pilha.c}}
+\mbox{\hyperlink{_pilha_8c}{Ir para a documentação desse arquivo.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00001}00001\ \textcolor{comment}{/*\ Grupo\ 4}}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00002}00002\ \textcolor{comment}{\ *\ Davi\ Brandão\ de\ Souza}}
@@ -63,15 +64,21 @@
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{return}\ (p-\/>\mbox{\hyperlink{struct_pilha_a0a06f50c808099546e057b445cc90c14}{tamanho}}\ ==\ 0);}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00071}00071\ \}}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00072}00072\ }
-\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00073}\mbox{\hyperlink{_pilha_8c_adeb206688bdef1116177382a6c38d742}{00073}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pilha_8c_adeb206688bdef1116177382a6c38d742}{imprimePilha}}(\mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *p,\ \textcolor{keywordtype}{void}\ (*\mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprimeCB}})(\textcolor{keywordtype}{void}*))}
+\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00073}\mbox{\hyperlink{_pilha_8c_aabd34b0f38809d3c11a747538f569dc5}{00073}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pilha_8c_aabd34b0f38809d3c11a747538f569dc5}{imprimePilha}}(\mbox{\hyperlink{struct_pilha}{Pilha}}\ *p,\ \textcolor{keywordtype}{void}\ (*\mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprimeCB}})(\textcolor{keywordtype}{void}*))}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00074}00074\ \{}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\ ==\ NULL)\{\ \textcolor{keywordflow}{return};\ \}}
-\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *aux\ =\ p;}
+\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a3020fca858045abd38860fbd8a7c1383}{No}}\ *aux\ =\ p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}};}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux\ !=\ NULL)\{}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00078}00078\ \ \ \ \ \mbox{\hyperlink{_pilha_8h_a16b8bd165fa268fbc474e98a9f1ce309}{imprimeCB}}(aux-\/>\mbox{\hyperlink{structno_a893c237ff9580880d323c6636d0af66b}{chave}});}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00079}00079\ \ \ \ \ aux\ =\ aux-\/>\mbox{\hyperlink{structno_ac62f0e6cfd4c2f2cf975d243d16c8046}{prox}};}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00080}00080\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00081}00081\ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
 \DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00084}\mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{00084}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{_pilha_8c_a896788aa581277a3c412734b92e76d80}{esvaziaPilha}}(\mbox{\hyperlink{struct_pilha}{Pilha}}\ *p)}
+\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00085}00085\ \{}
+\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{if}\ (p\ ==\ NULL)\{\ \textcolor{keywordflow}{return};\ \}}
+\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{while}\ (p-\/>\mbox{\hyperlink{struct_pilha_ad5d3a7ee0d7166e2558e371e2940aa43}{topo}}\ !=\ NULL)\{\ \mbox{\hyperlink{_pilha_8c_add7747bf27459e299479ad7492aa7bbd}{desempilha}}(p);\ \}}
+\DoxyCodeLine{\Hypertarget{_pilha_8c_source_l00088}00088\ \}}
 
 \end{DoxyCode}

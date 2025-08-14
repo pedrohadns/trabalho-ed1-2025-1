@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['tamanho_0',['tamanho',['../struct_pilha.html#a0a06f50c808099546e057b445cc90c14',1,'Pilha']]],
-  ['topo_1',['topo',['../struct_pilha.html#ad5d3a7ee0d7166e2558e371e2940aa43',1,'Pilha']]]
+  ['pilha_0',['Pilha',['../struct_pilha.html',1,'']]],
+  ['pilha_2ec_1',['Pilha.c',['../_pilha_8c.html',1,'']]],
+  ['pilha_2eh_2',['Pilha.h',['../_pilha_8h.html',1,'']]],
+  ['programa1_2ec_3',['programa1.c',['../programa1_8c.html',1,'']]],
+  ['prox_4',['prox',['../structno.html#ac62f0e6cfd4c2f2cf975d243d16c8046',1,'no']]]
 ];

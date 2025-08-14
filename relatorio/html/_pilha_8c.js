@@ -5,5 +5,6 @@ var _pilha_8c =
     [ "desempilha", "_pilha_8c.html#add7747bf27459e299479ad7492aa7bbd", null ],
     [ "empilha", "_pilha_8c.html#adc224ddc2f13d7f61deecb4b5a4ccaca", null ],
     [ "estaVazia", "_pilha_8c.html#a8007eb984b84b3ea7bb76ef6cbedd78b", null ],
-    [ "imprimePilha", "_pilha_8c.html#adeb206688bdef1116177382a6c38d742", null ]
+    [ "esvaziaPilha", "_pilha_8c.html#a896788aa581277a3c412734b92e76d80", null ],
+    [ "imprimePilha", "_pilha_8c.html#aabd34b0f38809d3c11a747538f569dc5", null ]
 ];
