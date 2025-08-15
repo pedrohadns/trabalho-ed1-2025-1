@@ -2,7 +2,7 @@
  * Davi Brandão de Souza
  * Mauricio Zanetti Neto
  * Pedro Henrique Alves do Nascimento
- * Silvio Eduardo Belinazzi de Andrade
+ * Silvio Eduardo Bellinazzi de Andrade
  */
 
 /**
@@ -11,7 +11,7 @@
  * @authors Davi Brandão de Souza
  * @authors Mauricio Zanetti Neto
  * @authors Pedro Henrique Alves do Nascimento
- * @authors Silvio Eduardo Belinazzi de Andrade
+ * @authors Silvio Eduardo Bellinazzi de Andrade
  *
  * @showdate "%B %Y"
  */

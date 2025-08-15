@@ -1,8 +1,8 @@
-/** Grupo 4
+/* Grupo 4
  * Davi Brandão de Souza
- * Silvio Eduardo Belinazzi de Andrade
  * Mauricio Zanetti Neto
  * Pedro Henrique Alves do Nascimento
+ * Silvio Eduardo Bellinazzi de Andrade
  */
 
 /**
@@ -11,7 +11,7 @@
  * @authors Davi Brandão de Souza
  * @authors Mauricio Zanetti Neto
  * @authors Pedro Henrique Alves do Nascimento
- * @authors Silvio Eduardo Belinazzi de Andrade
+ * @authors Silvio Eduardo Bellinazzi de Andrade
 */
 
 #include <stdio.h>
@@ -25,11 +25,10 @@
  * @struct Posicao
  * @brief Representa uma posição no mapa com coordenadas (x, y).
  */
-
 typedef struct
 {
-    int x; /**< Coordenada x (linha) */
-    int y; /**< Coordenada y (coluna) */
+    int x; ///< Coordenada x (linha)
+    int y; ///< Coordenada y (coluna)
 } Posicao;
 
 /**

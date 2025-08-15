@@ -2,7 +2,7 @@
  * Davi Brandão de Souza
  * Mauricio Zanetti Neto
  * Pedro Henrique Alves do Nascimento
- * Silvio Eduardo Belinazzi de Andrade
+ * Silvio Eduardo Bellinazzi de Andrade
  */
 
 /**
@@ -11,7 +11,7 @@
  * @authors Davi Brandão de Souza
  * @authors Mauricio Zanetti Neto
  * @authors Pedro Henrique Alves do Nascimento
- * @authors Silvio Eduardo Belinazzi de Andrade
+ * @authors Silvio Eduardo Bellinazzi de Andrade
  *
  * @showdate "%B %Y"
  */
@@ -21,6 +21,11 @@
 
 /**
  * @brief Função que valida expressões matemáticas conforme seus delimitadores.
+ * Lê a expressão caractere a caractere e empilha somente os delimitadores de
+ * abertura, se o próximo caractere delimitador for de fechamento e for o 
+ * correspondente, desempilha o elemento do topo e continua. Leva em consideração a
+ * hierarquia dos delimitadores, não pode haver chaves ou colchetes dentro de parênteses, 
+ * nem chaves dentro de colchetes.
  * @param exp Expressão que deve ser validada (*string*).
  * @return Retorna 0 para uma expressão inválida e 1 para uma expressão válida.
  */
