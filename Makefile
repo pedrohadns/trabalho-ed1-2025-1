@@ -1,5 +1,6 @@
 CC = gcc
 CFLAGS =
+all: programa1 programa2 programa3
 
 programa1:p1.o Pilha.o
 	$(CC) $(CFLAGS) -o $@ $^
